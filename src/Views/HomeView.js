@@ -5,7 +5,7 @@ const HomeView = () => {
   return (
     <div>
       <h1> Телефонная книга</h1>
-      <Carousel>
+      <Carousel autoPlay={3000}>
         <div>
           <img
             src="https://habrastorage.org/web/0a3/ab4/d74/0a3ab4d74aa04b0ab913569836ea4208.jpg"

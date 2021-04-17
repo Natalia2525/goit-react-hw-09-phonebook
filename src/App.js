@@ -5,6 +5,7 @@ import AppBar from './Components/AppBar';
 import { getCurrentUser } from './redux/user/user-operations';
 import PrivateRoute from './Components/PrivateRoute';
 import PublicRoute from './Components/PublicRoute';
+import Spinner from './Components/Spinner';
 
 const HomeView = lazy(() => import('./Views/HomeView'));
 const LoginView = lazy(() => import('./Views/LoginView'));
@@ -21,7 +22,7 @@ const App = () => {
   return (
     <>
       <AppBar />
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Spinner />}>
         <Switch>
           <Route exact path="/" component={HomeView} />
           <PublicRoute
